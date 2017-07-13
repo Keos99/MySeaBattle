@@ -17,6 +17,7 @@ public class Field {
     private int minx;
     private int maxx;
 
+
     Field() {
         ship = 'X';
         cif = '+';

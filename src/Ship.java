@@ -9,6 +9,7 @@ public class Ship {
     Verification verifi;
 
 
+
     void shipGeneration(Field field, Verification verifi, char[][] gamefield) {
         int decknum;
         int count;

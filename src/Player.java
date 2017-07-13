@@ -13,6 +13,7 @@ public class Player {
     String getUsername(){
         return username;
     }
+
     void setUsername(){
         username = scanner.nextLine();
     }

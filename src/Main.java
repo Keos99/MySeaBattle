@@ -15,6 +15,7 @@ public class Main {
         Verification verifi = new Verification();
         Scanner scan = new Scanner(System.in);
 
+
         field.FieldInit(field.returnMyCells());     //Заполнение поля игрока
         field.FieldInit(field.returnEnemyCells());  //Заполнение поля противника
         field.FieldInit(field.returncelltc());     //Заполнение массива для проведения проверки

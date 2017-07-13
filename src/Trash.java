@@ -19,6 +19,7 @@ public class Trash {
     */
 }
 
+
      /*
        if (a == 'X') {
            ice = true;

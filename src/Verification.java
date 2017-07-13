@@ -18,6 +18,7 @@ public class Verification {
         return ice;
     }
 
+
     boolean isGameEnd(char[][] gamefield,char[][] enemygamefield){
         boolean end = true;
         return end;
