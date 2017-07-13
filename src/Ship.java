@@ -7,23 +7,26 @@ public class Ship {
 
     Field field;
     Verification verifi;
-    int ships[][] = new int[20][4];
 
-    /*
-    void randomShipSet(){
+
+    void shipGeneration(Field field, Verification verifi, char[][] gamefield) {
+        int decknum;
+        int count;
+
         for (decknum = 4; decknum > 0; decknum--) {
             for (count = 4; count >= decknum; count--) {
                 do {
                     field.setRandomDirection();
                     field.setRandomYX(decknum);
-                    field.readCells(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection());
-                } while (verifi.isCellEmpty(field.celltc, decknum));
-                field.placeShip(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection());
-                field.indent(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection());
+                    field.readCells(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection(),gamefield);
+                } while (verifi.isCellEmpty(field.returncelltc(), decknum));
+                field.placeShip(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection(),gamefield);
+                field.indent(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection(),gamefield);
             }
         }
     }
-    */
 }
+
+
 
 

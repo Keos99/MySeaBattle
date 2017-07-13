@@ -143,9 +143,16 @@ public class Field {
     int getRandomX() {
         return randomx;
     }
-    public void readCells(int deck, int randomy, int randomx, int direction) {
+    char getShip(){
+        char sh = ship;
+        return sh;
+    }
+
+
+
+    public void readCells(int deck, int randomy, int randomx, int direction, char[][] gamefield) {
         for (count = 0; count < deck; count++) {
-            celltc[count] = mycells[randomy][randomx];
+            celltc[count] = gamefield[randomy][randomx];
             if (direction == 1) {
                 randomx++;
             } else {
@@ -153,9 +160,10 @@ public class Field {
             }
         }
     }
-    void placeShip(int deck, int randomy, int randomx, int direction) {
+
+    void placeShip(int deck, int randomy, int randomx, int direction, char[][] gamefield) {
         for (count = 0; count < deck; count++) {
-            mycells[randomy][randomx] = ship;
+            gamefield[randomy][randomx] = ship;
             if (direction == 1) {
                 randomx++;
             } else {
@@ -163,24 +171,25 @@ public class Field {
             }
         }
     }
-    void indent(int deck, int randomy, int randomx, int direction) {
+
+    void indent(int deck, int randomy, int randomx, int direction, char[][] gamefield) {
         if (direction == 1) {
             randomy--;
             randomx--;
             for (count = 0; count <= deck; count++) {
-                mycells[randomy][randomx] = cif;
+                gamefield[randomy][randomx] = cif;
                 randomx++;
             }
             for (count = 0; count <= 1; count++) {
-                mycells[randomy][randomx] = cif;
+                gamefield[randomy][randomx] = cif;
                 randomy++;
             }
             for (count = 0; count <= deck; count++) {
-                mycells[randomy][randomx] = cif;
+                gamefield[randomy][randomx] = cif;
                 randomx--;
             }
             for (count = 0; count <= 1; count++) {
-                mycells[randomy][randomx] = cif;
+                gamefield[randomy][randomx] = cif;
                 randomy--;
             }
         }
@@ -188,19 +197,19 @@ public class Field {
             randomy--;
             randomx++;
             for (count = 0; count <= deck; count++) {
-                mycells[randomy][randomx] = cif;
+                gamefield[randomy][randomx] = cif;
                 randomy++;
             }
             for (count = 0; count <= 1; count++) {
-                mycells[randomy][randomx] = cif;
+                gamefield[randomy][randomx] = cif;
                 randomx--;
             }
             for (count = 0; count <= deck; count++) {
-                mycells[randomy][randomx] = cif;
+                gamefield[randomy][randomx] = cif;
                 randomy--;
             }
             for (count = 0; count <= 1; count++) {
-                mycells[randomy][randomx] = cif;
+                gamefield[randomy][randomx] = cif;
                 randomx++;
             }
 

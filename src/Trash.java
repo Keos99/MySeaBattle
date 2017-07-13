@@ -3,6 +3,23 @@
  */
 public class Trash {
      /*
+    void randomShipSet(){
+        for (decknum = 4; decknum > 0; decknum--) {
+            for (count = 4; count >= decknum; count--) {
+                do {
+                    field.setRandomDirection();
+                    field.setRandomYX(decknum);
+                    field.readCells(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection());
+                } while (verifi.isCellEmpty(field.celltc, decknum));
+                field.placeShip(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection());
+                field.indent(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection());
+            }
+        }
+    }
+    */
+}
+
+     /*
        if (a == 'X') {
            ice = true;
        }
@@ -295,4 +312,5 @@ public class Trash {
     */
 
 
-}
+
+

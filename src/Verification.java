@@ -3,7 +3,7 @@
  */
 public class Verification {
 
-    public boolean isCellEmpty(char[] args, int deck) {
+    boolean isCellEmpty(char[] args, int deck) {
         boolean ice = true;
 
         for (int count = 0; count < deck; count++) {
@@ -16,6 +16,11 @@ public class Verification {
             }
         }
         return ice;
+    }
+
+    boolean isGameEnd(char[][] gamefield,char[][] enemygamefield){
+        boolean end = true;
+        return end;
     }
 }
 
