@@ -13,8 +13,10 @@ public class Ship {
     void shipGeneration(Field field, Verification verifi, char[][] gamefield) {
         int decknum;
         int count;
+        int shipnumber = 0;
 
         for (decknum = 4; decknum > 0; decknum--) {
+            shipnumber++;
             for (count = 4; count >= decknum; count--) {
                 do {
                     field.setRandomDirection();
@@ -23,8 +25,11 @@ public class Ship {
                 } while (verifi.isCellEmpty(field.returncelltc(), decknum));
                 field.placeShip(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection(),gamefield);
                 field.indent(decknum, field.getRandomY(), field.getRandomX(), field.getRandomDirection(),gamefield);
+                System.out.println("Корабль № " + shipnumber + ", c " + decknum + " палубами, занял свое место!");
             }
+
         }
+        System.out.println();
     }
 }
 

@@ -29,6 +29,7 @@ public class Field {
     private char mycells[][] = new char[12][12];
     private char enemycells[][] = new char[12][12];
     private char celltc[] = new char[4];
+    private char fieldforshoot[][] = new char[10][10];
 
 
     char[][] returnMyCells(){
@@ -144,12 +145,11 @@ public class Field {
     int getRandomX() {
         return randomx;
     }
+
     char getShip(){
         char sh = ship;
         return sh;
     }
-
-
 
     public void readCells(int deck, int randomy, int randomx, int direction, char[][] gamefield) {
         for (count = 0; count < deck; count++) {
@@ -215,6 +215,14 @@ public class Field {
             }
 
         }
+    }
+
+    void fieldShowLong(char[][] args){
+
+    }
+
+    void fieldForShootShow(){
+
     }
 }
 

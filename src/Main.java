@@ -13,8 +13,8 @@ public class Main {
         Player player = new Player();
         Ship ship = new Ship();
         Verification verifi = new Verification();
-        Scanner scan = new Scanner(System.in);
 
+        Scanner scan = new Scanner(System.in);
 
         field.FieldInit(field.returnMyCells());     //Заполнение поля игрока
         field.FieldInit(field.returnEnemyCells());  //Заполнение поля противника
@@ -31,14 +31,13 @@ public class Main {
 
         switch (choose){
             case 1:
+                BattleShip.fleetInit();
                 ship.shipGeneration(field, verifi, field.returnMyCells());
                 break;
             case 2:
                 //TODO Дописать расстановку кораблей игроком
                 break;
         }
-
-        ship.shipGeneration(field,verifi,field.returnEnemyCells());
 
         do {
             field.fieldShow(field.returnMyCells());
@@ -64,7 +63,6 @@ public class Main {
         System.out.println();;
         field.fieldShow(field.returnMyCells());
     }
-
 
 }
 
