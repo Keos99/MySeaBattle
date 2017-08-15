@@ -19,6 +19,7 @@ public class Main {
         field.FieldInit(field.returnMyCells());     //Заполнение поля игрока
         field.FieldInit(field.returnEnemyCells());  //Заполнение поля противника
         field.FieldInit(field.returncelltc());     //Заполнение массива для проведения проверки
+        field.FieldInit(field.returnfieldforshoot());
 
         System.out.println("\tКапитан, как вас зовут?");
         player.setUsername();
@@ -40,30 +41,14 @@ public class Main {
         }
 
         do {
-            field.fieldShow(field.returnMyCells());
+           // field.fieldShow(field.returnMyCells());
+            field.fieldShowLong(field.returnMyCells(),field.returnfieldforshoot());
             System.out.println();
             player.doShoot(field.returnEnemyCells());
-
-
-
-
-
-
-
         }while(verifi.isGameEnd(field.returnMyCells(),field.returnEnemyCells()));
 
 
-        System.out.println("Поле врага!");
-        field.showAllField(field.returnEnemyCells());
-        System.out.println();;
-        field.fieldShow(field.returnEnemyCells());
-        System.out.println();
-        System.out.println();
-        field.showAllField(field.returnMyCells());
-        System.out.println();;
-        field.fieldShow(field.returnMyCells());
     }
-
 }
 
 
